@@ -1,0 +1,58 @@
+﻿@model IEnumerable<vdsDemo.Models.Create_DR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DR Dashboard</h2>
+
+<p>
+    @Html.ActionLink("Create New DR", "Create")
+</p>
+<table>
+    <tr>
+        <th style="padding-right:20px">
+            @Html.DisplayNameFor(model => model.JSO_ID)
+        </th>
+        <th style="padding-right:25px">
+            Date/Time Completed
+        </th>
+        <th style="padding-right:25px">
+            Officer
+        </th>
+        <th style="padding-right:25px">
+            Violation
+        </th>
+        <th style="padding-right:25px">
+            Inmate Last Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    //<tr style="background-color:#ff8282">
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JSO_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfIncident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.officerLast)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.violation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inmateLast)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

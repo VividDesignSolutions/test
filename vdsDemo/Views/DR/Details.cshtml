@@ -1,0 +1,64 @@
+﻿@model vdsDemo.Models.Create_DR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Dashboard Details</h2>
+
+<fieldset>
+    <legend>Create_DR</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JSO_ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JSO_ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateOfIncident)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfIncident)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.officerFirst)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.officerFirst)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.officerLast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.officerLast)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.violation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.violation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.inmateFirst)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.inmateFirst)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.inmateLast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.inmateLast)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

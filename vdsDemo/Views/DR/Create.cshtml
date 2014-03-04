@@ -1,0 +1,83 @@
+﻿@model vdsDemo.Models.Create_DR
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create DR</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Create_DR</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.JSO_ID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JSO_ID)
+            @Html.ValidationMessageFor(model => model.JSO_ID)
+        </div>
+
+        <div class="editor-label">
+            <strong>Date/Time Completed</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DateOfIncident) = @DateTime.Now
+            @Html.ValidationMessageFor(model => model.DateOfIncident)
+        </div>
+
+        <div class="editor-label">
+           <strong>Officer First Name</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.officerFirst)
+            @Html.ValidationMessageFor(model => model.officerFirst)
+        </div>
+
+        <div class="editor-label">
+            <strong>Officer Last Name</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.officerLast)
+            @Html.ValidationMessageFor(model => model.officerLast)
+        </div>
+
+        <div class="editor-label">
+            <strong>Violation</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.violation)
+            @Html.ValidationMessageFor(model => model.violation)
+        </div>
+
+        <div class="editor-label">
+            <strong>Inmate First Name</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.inmateFirst)
+            @Html.ValidationMessageFor(model => model.inmateFirst)
+        </div>
+
+        <div class="editor-label">
+            <strong>Inmate Last Name</strong>
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.inmateLast)
+            @Html.ValidationMessageFor(model => model.inmateLast)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
